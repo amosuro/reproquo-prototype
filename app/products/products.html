@@ -1,0 +1,144 @@
+<div class="row">
+  <div class="secondary-nav">
+    <div class="small-12 columns">
+      <nav custom-scrollbar>
+        <ul>
+          <li class="active"><a href="#products">All products</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="row">
+    <div class="small-12 columns">
+      <div ng-include src="'partials/news_alerts.html'" class="show-for-medium-up"></div>
+    </div>
+
+    <div ng-controller="ProductsController" class="small-12 columns">
+      <div class="table-filters">
+        <div class="row">
+          <a ng-click="showProductFilters = ! showProductFilters" class="button table-filters__btn">Show filters</a>
+        </div>
+
+        <div class="row collapse table-filters-row" ng-show="showProductFilters">
+          <div class="medium-4 large-2 columns">
+            <select chosen data-placeholder="Code" class="chosen-select">
+              <option>Code</option>
+            </select>
+          </div>
+          <div class="medium-4 large-2 columns">
+            <select chosen data-placeholder="Type" class="chosen-select">
+              <option>Type</option>
+            </select>
+          </div>
+          <div class="medium-4 large-2 columns">
+            <select chosen data-placeholder="Size" class="chosen-select">
+              <option>Size</option>
+            </select>
+          </div>
+          <div class="medium-6 large-3 columns">
+            <select chosen data-placeholder="Weight" class="chosen-select">
+              <option>Weight</option>
+            </select>
+          </div>
+          <div class="medium-6 large-3 columns">
+            <select chosen data-placeholder="Tech" class="chosen-select">
+              <option>Tech</option>
+            </select>
+          </div>
+        </div>
+        <div class="row collapse table-filters-row" ng-show="showProductFilters">
+          <div class="medium-4 large-2 columns">
+            <select chosen data-placeholder="Manufacturer" class="chosen-select">
+              <option>Manufacturer</option>
+            </select>
+          </div>
+          <div class="medium-4 large-4 columns">
+            <select chosen data-placeholder="Device" class="chosen-select">
+              <option>Device</option>
+            </select>
+          </div>
+          <div class="medium-4 large-6 columns">
+            <select chosen data-placeholder="Keywords" class="chosen-select">
+              <option>Keywords</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-controls">
+        <div class="row collapse">
+          <div class="small-8 large-5 columns">
+            <div class="row collapse">
+              <div class="small-6 columns">
+                <input type="text" class="input-field" placeholder="Keywords" />
+              </div>
+              <div class="small-6 columns">
+                <a class="button search-button">Search</a>
+              </div>
+            </div>
+          </div>
+          <div class="small-4 medium-12 large-7 columns">
+            <div class="table-controls-switches">
+              <div class="row collapse">
+                <div class="small-3 columns show-for-medium-up">
+                  <div class="switch-container">
+                    <div class="switch-icon icon-eye"></div>
+                    <div class="switch">
+                      <div class="switch-label">obsolete</div>
+                      <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+                      <label for="cmn-toggle-1"></label>
+                    </div>
+                    <div class="switch-icon icon-eye"></div>
+                  </div>
+                </div>
+                <div class="small-3 columns show-for-medium-up">
+                  <div class="switch-container">
+                    <div class="switch-icon icon-eye"></div>
+                    <div class="switch">
+                      <div class="switch-label">similar</div>
+                      <input id="cmn-toggle-2" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+                      <label for="cmn-toggle-2"></label>
+                    </div>
+                    <div class="switch-icon icon-eye"></div>
+                  </div>
+                </div>
+                <div class="small-3 columns show-for-medium-up">
+                  <div class="switch-container">
+                    <div class="switch-icon icon-grid"></div>
+                    <div class="switch">
+                      <div class="switch-label">view</div>
+                      <input id="cmn-toggle-3" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+                      <label for="cmn-toggle-3"></label>
+                    </div>
+                    <div class="switch-icon icon-grid"></div>
+                  </div>
+                </div>
+                <div class="small-3 columns">
+                  <a class="icon-plus new-button"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table product-table">
+        <table class="responsive">
+          <thead>
+            <tr>
+              <th width="" ng-repeat="header in getHeader(products[0]) track by $index">{{header}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="row in products">
+              <td width="" ng-repeat="cell in getValue(row) track by $index">{{cell}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

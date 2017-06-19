@@ -1,0 +1,29 @@
+.button {
+  @include box-sizing(border-box);
+  background: $rq1;
+  border-radius: 3px;
+  color: #ffffff;
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  text-align: center;
+
+  &:hover,
+  &:active {
+    background: darken($rq1, 10%);
+    color: #ffffff;
+  }
+}
+
+.button.secondary {
+  background: $rq2;
+}
+
+// Plus icon button typically used to create new records
+.new-button {
+  background: #cccccc;
+  border-radius: 3px;
+  color: #ffffff;
+  display: inline-block;
+  float: right;
+  padding: 0.45rem 0.7rem;
+}

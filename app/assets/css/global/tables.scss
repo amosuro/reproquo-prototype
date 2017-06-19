@@ -1,0 +1,43 @@
+.table {
+  overflow-x: scroll;
+  width: 100%;
+
+  table {
+    width: 100%;
+  }
+}
+
+// Filters
+.table-filters {
+  margin: 0 0 1rem;
+
+  .chosen-container,
+  .chosen-select {
+    padding: 0.5rem 0;
+  }
+}
+
+// Controls
+.table-controls {
+  margin: 0 0 1rem;
+
+  .search-button {
+    margin: 0 0 0 1rem;
+  }
+}
+
+@media #{$medium-up} {
+  .table-controls {
+    .table-controls-switches {
+      margin: 1rem 0 0;
+    }
+  }
+}
+
+@media #{$large-up} {
+  .table-controls {
+    .table-controls-switches {
+      margin: 0;
+    }
+  }
+}

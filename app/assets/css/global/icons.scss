@@ -1,0 +1,65 @@
+/*
+Icon Font: fontcustom
+*/
+
+@font-face {
+  font-family: "fontcustom";
+  src: url("assets/fonts/fontcustom.eot");
+  src: url("assets/fonts/fontcustom.eot?#iefix") format("embedded-opentype"),
+  url("assets/fonts/fontcustom.woff") format("woff"),
+  url("assets/fonts/fontcustom.ttf") format("truetype"),
+  url("assets/fonts/fontcustom.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "fontcustom";
+    src: url("assets/fonts/fontcustom.svg#fontcustom") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-customers:before,
+.icon-devices:before,
+.icon-eye:before,
+.icon-eye-cross:before,
+.icon-grid:before,
+.icon-manufacturers:before,
+.icon-menu:before,
+.icon-menu-copy:before,
+.icon-orders:before,
+.icon-plus:before,
+.icon-price-lists:before,
+.icon-products:before,
+.icon-suppliers:before {
+  display: inline-block;
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-customers:before { content: "\f102"; }
+.icon-devices:before { content: "\f103"; }
+.icon-eye:before { content: "\f109"; }
+.icon-eye-cross:before { content: "\f10a"; }
+.icon-grid:before { content: "\f10b"; }
+.icon-manufacturers:before { content: "\f104"; }
+.icon-menu:before { content: "\f108"; }
+.icon-menu-copy:before { content: "\f10c"; }
+.icon-orders:before { content: "\f105"; }
+.icon-plus:before { content: "\f10d"; }
+.icon-price-lists:before { content: "\f106"; }
+.icon-products:before { content: "\f100"; }
+.icon-suppliers:before { content: "\f107"; }

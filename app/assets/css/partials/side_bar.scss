@@ -1,0 +1,43 @@
+.side-bar {
+  height: 100%;
+}
+
+.sidebar-content {
+  background: $rq4;
+  color: #ffffff;
+  height: 100%;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: $rq2;
+    display: block;
+    line-height: 2.5rem;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+
+    &:before {
+      font-size: 2rem;
+      margin-right: 0.5rem;
+      position: relative;
+      top: 0.4rem;
+    }
+  }
+
+  .active a {
+    background-image: url('assets/img/arrow-right.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 10px 16px;
+    border-left: 2px solid $rq1;
+    color: #ffffff;
+  }
+}
+
+@media #{$medium-up} {
+
+}

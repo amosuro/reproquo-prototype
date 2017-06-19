@@ -1,0 +1,39 @@
+.secondary-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  nav {
+    overflow-x: auto;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 1000px;
+  }
+
+  li {
+    float: left;
+    margin: 0 1rem 0;
+  }
+
+  a {
+    color: #fff;
+    display: block;
+    padding: 1rem 0;
+    text-decoration: none;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .active a {
+    background-image: url('assets/img/arrow-up.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 16px 10px;
+  }
+}

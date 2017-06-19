@@ -1,0 +1,56 @@
+<!doctype html>
+<html class="no-js" ng-app="reproquoApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="assets/libs/css/responsive-tables.css">
+    <link rel="stylesheet" href="assets/libs/css/jquery.mCustomScrollbar.css">
+
+    <script src="assets/libs/js/jquery-1.11.2.min.js"></script>
+    <script src="assets/libs/js/angular.min.js"></script>
+    <script src="assets/libs/js/angular-route.js"></script>
+    <script src="assets/libs/js/modernizr-2.8.3.min.js"></script>
+    <script src="assets/libs/js/chosen.jquery.min.js"></script>
+    <script src="assets/libs/js/responsive-tables.js"></script>
+    <script src="assets/libs/js/foundation/foundation.js"></script>
+    <script src="assets/libs/js/foundation/foundation.offcanvas.js"></script>
+    <script src="assets/libs/js/jquery.mCustomScrollbar.js"></script>
+    <script src="app.js"></script>
+    <script src="products/products.js"></script>
+    <script src="orders/orders.js"></script>
+    <script src="customers/customers.js"></script>
+    <script src="suppliers/suppliers.js"></script>
+    <script src="manufacturers/manufacturers.js"></script>
+    <script src="devices/devices.js"></script>
+    <script src="price-lists/price-lists.js"></script>
+    <script src="components/chosen-directive.js"></script>
+    <script src="components/nav-menu-directive.js"></script>
+    <script src="components/custom-scrollbar-directive.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </head>
+  <body>
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <div class="side-bar left-off-canvas-menu hide-for-medium-up" ng-include src="'partials/side_bar.html'"></div>
+        <div class="top-bar" ng-include src="'partials/top_bar.html'"></div>
+        <div class="wrapper">
+          <div class="row full-width collapse">
+            <div ng-include class="side-bar show-for-medium-up medium-3 columns" src="'partials/side_bar.html'"></div>
+            <div class="content-wrapper medium-9 columns" ng-view>
+
+            </div>
+          </div>
+        </div>
+        <a class="exit-off-canvas"></a>
+      </div>
+    </div>
+  </body>
+</html>

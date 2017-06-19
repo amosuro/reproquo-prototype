@@ -1,0 +1,34 @@
+// Input fields
+.input-field {
+  @include box-sizing(border-box);
+  background: #ffffff;
+  border: 1px solid $rq2;
+  border-radius: 0;
+  color: $rq6;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.4rem;
+  width: 100%;
+}
+
+// Chosen custom styles
+.chosen-container-single {
+  width: 100% !important;
+
+  .chosen-single {
+    @extend .input-field;
+    height: auto;
+
+    > div {
+      top: 0.5rem;
+    }
+  }
+
+  .chosen-drop {
+    border-radius: 0;
+  }
+
+  &.chosen-container-active .chosen-single {
+    background: #ffffff;
+  }
+}

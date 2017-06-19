@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="secondary-nav">
+    <div class="small-12 columns">
+      <nav custom-scrollbar>
+        <ul>
+          <li class="active"><a href="#price-lists">Customer</a></li>
+          <li><a href="#manufacturers">Supplier</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+<div class="content">
+  <div class="row">
+    <div class="small-12 columns">
+      <div ng-include src="'partials/news_alerts.html'" class="show-for-medium-up"></div>
+    </div>
+    <div ng-controller="PriceListsController" class="small-12 columns">
+      <div class="table">
+        <table class="responsive">
+          <thead>
+            <tr>
+              <th width="" ng-repeat="header in getHeader(priceLists[0]) track by $index">{{header}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="row in priceLists">
+              <td width="" ng-repeat="cell in getValue(row) track by $index">{{cell}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+// Foundation-specific styles
+@import "../libs/css/foundation/settings";
+@import "../libs/css/foundation/components/block-grid";
+@import "../libs/css/foundation/components/grid";
+@import '../libs/css/foundation/components/offcanvas';
+@import "../libs/css/foundation/components/tables";
+@import '../libs/css/foundation/components/visibility';
+
+// Normalize
+@import "../libs/css/normalize";
+
+// Chosen
+@import "../libs/css/chosen";
+
+// Custom styles
+@import "global/variables";
+@import "global/global";
+@import "global/buttons";
+@import "global/fonts";
+@import "global/icons";
+@import "global/mixins";
+@import "global/tables";
+@import "global/forms";
+@import "global/switches";
+
+// Partials
+@import "partials/top_bar";
+@import "partials/side_bar";
+@import "partials/secondary_nav";
+@import "partials/news_alerts";
+
+// Components
+@import "products/products";
+@import "orders/orders";
+@import "customers/customers";
+@import "suppliers/suppliers";
+@import "manufacturers/manufacturers";
+@import "devices/devices";
+@import "price-lists/price-lists";

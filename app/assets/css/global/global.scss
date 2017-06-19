@@ -1,0 +1,55 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapper,
+.off-canvas-wrap,
+.inner-wrap {
+  height: 100%;
+}
+
+.content-wrapper {
+  background: $rq2;
+  height: 100%;
+  overflow-y: scroll !important;
+  position: relative;
+}
+
+.content {
+  background: $rq5;
+  padding: 1rem 0;
+  height: 100%;
+  margin: 3.4rem 0 0;
+}
+
+.footer {
+  border-top: 1px solid $rq2;
+  margin: 1rem 0 0;
+  padding: 1rem 0 0;
+
+  .footer__left {
+    .button:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .button {
+    margin: 0 0 0 1rem;
+  }
+}
+
+
+// Full width Foundation .rows
+.row.full-width {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+
+@media #{$medium-up} {
+  .content-wrapper {
+    border-left: 5px solid $rq2;
+  }
+}
